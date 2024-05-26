@@ -10,7 +10,7 @@ const Connection = require("./app/models/Connection");
 const Message = require("./app/models/Message");
 const Post = require("./app/models/Post");
 const Comment = require("./app/models/Comment");
-const mysql = require("mysql");
+// const mysql = require("mysql");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -39,20 +39,20 @@ app.use("/api/comments", require("./app/routes/comments"));
 
 // Serve frontend
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "social",
-});
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "root",
+//   database: "social",
+// });
 
-connection.connect((err) => {
-  if (err) {
-    console.error("Error connecting to MySQL: ", err);
-    return;
-  }
-  console.log("Connected to MySQL");
-});
+// connection.connect((err) => {
+//   if (err) {
+//     console.error("Error connecting to MySQL: ", err);
+//     return;
+//   }
+//   console.log("Connected to MySQL");
+// });
 
 // Multer configuration for file uploads
 const storage = multer.diskStorage({
