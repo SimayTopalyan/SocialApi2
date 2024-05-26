@@ -1,8 +1,8 @@
 // config/database.js
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize("u114524246_social", "u114524246_root", "7Ob2an;HK3&", {
-  host: "193.203.168.38",
+const sequelize = new Sequelize("sql7709483", "sql7709483", "75p1lUBZ8t", {
+  host: "sql7.freesqldatabase.com",
   dialect: "mysql",
   port: "3306",
 });
